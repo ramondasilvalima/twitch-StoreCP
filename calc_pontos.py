@@ -3,7 +3,9 @@ import streamlit as st
 
 st.header('Twitch.tv :blue[StoreCL]')
 st.subheader('Calcule o valor ideal para items na twitch!')
-horas = st.slider('Média de horas por live', 1, 24, 6)
+st.caption('Acesse a loja do streamelements e adicione itens, deixe o app calcular os valores por você!\n'
+           'Adicione corretamente os valores pedidos e tudo será calculado perfeitamente.')
+horas = st.slider('Média de horas por live/dia', 1, 24, 6)
 dias = st.slider('Dias de Live na semana', 1, 7, 3)
 horas_mensal = (horas * (dias * 4))
 st.write(horas, f'h por dia e', horas_mensal, 'horas mensais')
